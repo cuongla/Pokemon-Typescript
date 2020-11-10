@@ -3,12 +3,15 @@ export const POKEMON_FAIL = "POKEMON_FAIL";
 export const POKEMON_SUCCESS = "POKEMON_SUCCESS";
 
 export type PokemonInfo = {
+  name: string,
   abilities: PokemonAbility[],
   sprites: PokemonSprites,
   stats: PokemonStat[],
   types: PokemonType[],
   id: PokemonId,
-  weight: PokemonWeight
+  weight: number,
+  height: number,
+  moves: PokemonMove[],
 }
 
 export type PokemonId = {
@@ -19,6 +22,12 @@ export type PokemonAbility = {
   ability: {
     name: string
     url: string
+  }
+}
+
+export type PokemonMove = {
+  move: {
+    name: string
   }
 }
 
@@ -35,12 +44,11 @@ export type PokemonStat = {
 }
 
 export type PokemonType = {
-  name: string
+  type: {
+    name: string
+  }
 }
 
-export type PokemonWeight = {
-  weight: number
-}
 
 export interface PokemonLoading {
   type: typeof POKEMON_LOADING
