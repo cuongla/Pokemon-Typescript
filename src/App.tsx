@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {RootStore} from './Store';
 import {GetPokemon} from './actions/PokemonActions';
-import './App.css';
+import './Styles.scss';
 
 function App() {
   const dispatch = useDispatch();
@@ -24,6 +24,7 @@ function App() {
       {pokemonState.pokemon ? (
         <div>
           <img src={pokemonState.pokemon.sprites.front_default} alt="pokemon photo"/>
+          <img src={pokemonState.pokemon.sprites.back_default} alt="pokemon photo"/>
           {pokemonState.pokemon.abilities.map(ability => {
             return <p>{ability.ability.name}</p>
           })}

@@ -1,9 +1,9 @@
-import {PokemonDispatchTypes, PokemonType, POKEMON_FAIL, POKEMON_LOADING, POKEMON_SUCCESS} from '../actions/PokemonActionTypes';
+import {PokemonDispatchTypes, PokemonInfo, POKEMON_FAIL, POKEMON_LOADING, POKEMON_SUCCESS} from '../actions/PokemonActionTypes';
 
 
 interface DefaultStateI {
     loading: boolean,
-    pokemon?: PokemonType
+    pokemon?: PokemonInfo
 }
 
 const defaultState: DefaultStateI = {
