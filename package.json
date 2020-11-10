@@ -12,6 +12,7 @@
     "@types/redux-thunk": "^2.1.0",
     "@types/styled-components": "^5.1.4",
     "axios": "^0.21.0",
+    "img-loader": "^3.0.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-redux": "^7.2.2",
@@ -29,7 +30,7 @@
     "start": "react-scripts start",
     "watch": "webpack --config webpack.config.js --watch",
     "watch:build": "webpack --config webpack.prod.js",
-    "build": "react-scripts build",
+    "build": "webpack --config webpack.prod.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
